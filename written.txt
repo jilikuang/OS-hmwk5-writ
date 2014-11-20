@@ -49,7 +49,10 @@ In tatal:
 The wasted memory is (1021+1012+874+1008)*4 bytes = 15660 bytes
 
 4. (9.1)
-
+According to the equation on page 395 in the textbook:
+2 = 1+40*(1-P)
+1-P = 1/40
+P = 39/40 = 0.975 = 97.5%
 
 5. (9.4) - also computer # of page faults for each part
 
