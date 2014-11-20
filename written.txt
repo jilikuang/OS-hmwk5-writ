@@ -55,7 +55,29 @@ According to the equation on page 395 in the textbook:
 P = 39/40 = 0.975 = 97.5%
 
 5. (9.4) - also computer # of page faults for each part
+a)
+ACBDBAEFBFAGEFA
+A    +    +   +
+ C    E    G
+  B +   +   E
+   D   F +   +
+Totally 8 page faults
 
+b)
+ACBDBAEFBFAGEFA
+A    +    +   +
+ C    E     +
+  B +   +  G
+   D   F +   +
+Totally 7 page faults
+
+c)
+ ACBDBA    EFBF A  GEFA
+0A    10   E     0  1
+0 C     0   F 1   0  1
+0  B 1   0   1 0   G
+0   D     0     A     1
+Totally 8 page faults
 
 6. (9.12)
 
