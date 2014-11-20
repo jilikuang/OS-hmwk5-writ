@@ -80,4 +80,15 @@ c)
 Totally 8 page faults
 
 6. (9.12)
+a)
+TLB TLBm   T1    T2    TLBh   $   $m    T1    T2      M    TLBm   pf     transfer
+1ns+0.01*(100ns+100ns)+0.99*(1ns+0.01*(100ns+100ns))+100ns+0.01*0.00002*(10000000ns)
+=1ns+2ns+0.99*(1ns+2ns)+100ns+2ns
+=107.97ns
 
+b)
+With the 1st option, the last term is reduced to 1.4ns (0.6ns fewer)
+With the 2nd option, the last term is reduced to 1ns (1 ns fewew)
+With the 3rd option, the rate of page fault and teh access time is far more slower.
+
+With the above analysis, I am goint to by the faster disk drive and 500MB more DRAM. In that way, the last term should be able to become 0.7ns from 2ns. The overall time could be 106.67ns.
