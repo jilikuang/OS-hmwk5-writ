@@ -1,8 +1,15 @@
 1. (8.6)
-
+Assuming <*>[<*>][1024] reside in the same page, only the change in the first index will induce TLB misses.
+At the beginning, 2 TLB misses will be used to locate the binary and the stack.
+For the first and later round of k (the same i and j), b will always cause TLB misses. => 1024 misses
+For the first and later round of i, a and c will always cause TLB misses. => 2 * 1024 misses
+No TLB misses will be induced by changing j.
+Therefore, the total TLB misses should be 2+(2*1024)+(1024*1024*1024) = 0x40000802 = 1073743874
 
 2. (8.12)
-
+a) 0x00000000 => CAFE0000
+b) 0x20022002 => invalid virtual address
+c) 0x10015555 => D8BF5555
 
 3. (8.13)
 
