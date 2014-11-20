@@ -29,6 +29,7 @@ Therefore, 2*4K bytes = 8K bytes of memory is consumed by top and 2nd level tabl
 In the top-level table, only one entry is occupied => 1023 entries (4*1023 = 4092 bytes) are wasted.
 In the 2nd-level table, 16 entries are occupied => 1008 entries (4*1008 = 4032 bytes) are wasted.
 4092+4032 = 8124 bytes in total are wasted in the tables.
+Since 64K bytes is an integral multiple of 4K bytes, no waste is in data section.
 
 c)
 48K = 0x0000C000 start from 0x01000000:
@@ -47,6 +48,7 @@ In tatal:
 1021 entries are wasted in top-level table
 1 top-level table and 3 2nd-level tables are needed => 4*4K bytes = 16K bytes of memory is consumed for page tables.
 The wasted memory is (1021+1012+874+1008)*4 bytes = 15660 bytes
+Since 48K bytes, 600K bytes and 64K bytes are integral multiples of 4K bytes, there is no waste is in data section.
 
 4. (9.1)
 According to the equation on page 395 in the textbook:
